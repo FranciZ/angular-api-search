@@ -1,0 +1,20 @@
+<div class="col-md-12">
+
+    <label>Search</label>
+    <input placeholder="Search local(filter)"
+           type="text"
+           ng-model="searchTermLocal"
+           class="form-control">
+
+    <input placeholder="Search server"
+           ng-keyup="onSearchKeyUp()"
+           type="text"
+           ng-model="searchTerm"
+           class="form-control">
+
+    <div ng-repeat="locale in locales" ng-if="filterLocale(locale)" class="locale-item">
+        <b>{{locale.language}}</b>
+        <p>{{locale.description}}</p>
+    </div>
+
+</div>
